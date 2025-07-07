@@ -4,7 +4,7 @@
 
 ## Descripción
 
-POS Py es un sistema de Punto de Venta (POS) desarrollado en Python con PySide6 para la interfaz gráfica y SQLite para la gestión de base de datos.  
+POS Py es un sistema de Punto de Venta (POS) desarrollado completamente por IA en Python con PySide6 para la interfaz gráfica y SQLite para la gestión de base de datos.  
 Está diseñado para pequeños comercios que necesitan un control sencillo y eficiente de facturación, inventario, proveedores, pagos y caja.  
 Cuenta con una interfaz basada en pestañas para manejar múltiples clientes y diferentes módulos de gestión en una misma aplicación.
 
