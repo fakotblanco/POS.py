@@ -1,0 +1,18 @@
+<!doctype html><html lang='es'>
+<head><meta charset='utf-8'><title>Revisar factura</title><link rel='stylesheet' href='/static/style.css'></head>
+<body>
+<h1>Revisa artículos de la factura</h1>
+<form action='/confirm' method='post'>
+<table><thead><tr><th>Cant</th><th>Nombre</th><th>Código</th><th>Stock</th></tr></thead><tbody>
+{% for it in items %}
+<tr>
+<td><input type='number' name='qtys' value='{{it.qty}}' min='1' required></td>
+<td><input type='text' name='names' value='{{it.name}}' required></td>
+<td>{{it.code}}</td>
+<td>{{it.curr_stock}}</td>
+</tr>
+{% endfor %}
+</tbody></table>
+<button>Confirmar</button>
+</form>
+</body></html>

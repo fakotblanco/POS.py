@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>PosPy – Actualiza Stock</title>
+  <style>
+    body { font-family: sans-serif; margin:1rem; }
+    h1 { margin-top:2rem; }
+    section { margin-bottom:2rem; }
+    input, select, button { padding:6px; margin-right:4px; border-radius:4px; }
+    input, select { border:1px solid #ccc; }
+    button.btn-primary { background:#007bff; color:#fff; border:none; }
+    button.btn-success { background:#28a745; color:#fff; border:none; }
+    button.btn-danger  { background:#dc3545; color:#fff; border:none; }
+    table { width:100%; border-collapse: collapse; margin-top:0.5rem; }
+    th, td { border:1px solid #ddd; padding:8px; text-align:center; }
+    th { background:#005f5f; color:#fff; }
+    tbody tr:hover { background:#f1f1f1; }
+  </style>
+</head>
+<body>
+
+  <h1>Escanea código de barras</h1>
+  <section id="scanner">
+    <input type="file" accept="image/*" capture="environment" id="fileInput">
+    <div id="scanInfo"></div>
+  </section>
+
+  <h1>Entrada manual</h1>
+  <section id="manual">
+    <input type="text" id="search" placeholder="Código o nombre">
+    <select id="productSelect">
+      <option value="">— busca un producto —</option>
+    </select>
+    <input type="number" id="manualQty" value="1" min="1" style="width:4em">
+    <button id="addManual" class="btn-primary">Añadir</button>
+
+    <table id="manualTable">
+      <thead>
+        <tr><th>Código</th><th>Nombre</th><th>Cantidad</th><th>Acción</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <button id="confirmManual" class="btn-success">Confirmar Entradas</button>
+    <button id="cancelManual" class="btn-danger">Cancelar</button>
+  </section>
+
+  <h1>Historial de Entradas</h1>
+  <section id="history">
+    <table id="historyTable">
+      <thead>
+        <tr><th>Fecha</th><th>Código</th><th>Nombre</th><th>Cantidad</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <!-- ESTE SCRIPT DEBE APUNTAR A TU JS DEBIDAMENTE SERVIDO -->
+  <script src="/static/script.js"></script>
+</body>
+</html>

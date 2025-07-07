@@ -1,0 +1,13 @@
+<!doctype html><html lang='es'>
+<head><meta charset='utf-8'><title>POSpy – Cargar</title><link rel='stylesheet' href='/static/style.css'></head>
+<body>
+<h1>Cargar factura o código</h1>
+<h2>Factura completa</h2>
+<form action='/upload' method='post' enctype='multipart/form-data'>
+<input type='file' name='factura' accept='image/*,application/pdf' required>
+<button>Procesar</button></form>
+<h2>Foto de código de barras</h2>
+<form action='/scan' method='post' enctype='multipart/form-data'>
+<input type='file' name='photo' accept='image/*' required>
+<button>Escanear</button></form>
+</body></html>

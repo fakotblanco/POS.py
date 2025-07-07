@@ -1,0 +1,20 @@
+<!doctype html><html lang='es'>
+<head><meta charset='utf-8'><title>Resultado escaneo</title><link rel='stylesheet' href='/static/style.css'></head>
+<body>
+<h1>Resultado del escaneo</h1>
+{% if not items %}<p>No se reconoció ningún código.</p>{% else %}
+<table><thead><tr><th>Código</th><th>Nombre</th><th>Stock</th><th>Añadir</th></tr></thead><tbody>
+{% for it in items %}
+<tr>
+<td>{{it.code}}</td>
+<td>{{it.product.name if it.product else '(sin registrar)'}}{% if not it.found %} <em style='color:red'>(nuevo)</em>{% endif %}</td>
+<td>{{it.product.stock if it.product else 0}}</td>
+<td>{% if it.found %}<form action='/scan/add' method='post' style='display:inline'>
+<input type='hidden' name='code' value='{{it.code}}'>
+<input type='number' name='qty' value='1' min='1' style='width:4em'>
+<button>+</button></form>{% else %}—{% endif %}</td>
+</tr>
+{% endfor %}
+</tbody></table>{% endif %}
+<p><a href='/'>Volver</a></p>
+</body></html>
