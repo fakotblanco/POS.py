@@ -32,14 +32,12 @@ Cuenta con una interfaz basada en pestañas para manejar múltiples clientes y d
 1. Clona este repositorio:
 
    ```bash
-   git clone https://github.com/fakotblanco/pos-py.git
+   git clone https://github.com/fakotblanco/POS.py.git
    cd pos-py
 
 2.Crea y activa un entorno virtual:
 
-bash
-Copiar
-Editar
+
 python -m venv venv
 # Windows
 venv\Scripts\activate
@@ -48,19 +46,11 @@ source venv/bin/activate
 
 
 3.Instala las dependencias:
-
-bash
-Copiar
-Editar
 pip install -r requirements.txt
 
 
 Uso
 Ejecuta la aplicación con:
-
-bash
-Copiar
-Editar
 python main.py
 
 
